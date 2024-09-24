@@ -2,7 +2,7 @@ import { SPOTIFY_API_URL as API_URL } from '../../constants';
 import { AuthData, refreshAccessToken } from '../../main/auth';
 
 export enum AccountType {
-  Free = 'premium',
+  Free = 'free',
   Premium = 'premium',
 }
 
@@ -24,7 +24,7 @@ export interface SpotifyUserProfile {
   email: string;
   name: string;
   avatar: string;
-  accountType: AccountType;
+  accountType: AccountType.Premium;
 }
 
 export interface SpotifyCurrentlyPlaying {
