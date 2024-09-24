@@ -2,7 +2,7 @@ import { SPOTIFY_API_URL as API_URL } from '../../constants';
 import { AuthData, refreshAccessToken } from '../../main/auth';
 
 export enum AccountType {
-  Free = 'free',
+  Free = 'premium',
   Premium = 'premium',
 }
 
