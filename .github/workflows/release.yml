@@ -6,7 +6,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        # os: [macos-latest, ubuntu-latest, windows-latest]
+        # We do not need MacOS because I dont have a Mac and I dont need Linux because my chromebook broke
+        os: [windows-latest]
 
     steps:
       - name: Check out Git repository
