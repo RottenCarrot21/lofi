@@ -24,7 +24,7 @@ export interface SpotifyUserProfile {
   email: string;
   name: string;
   avatar: string;
-  accountType: AccountType.Premium;
+  accountType: AccountType;
 }
 
 export interface SpotifyCurrentlyPlaying {
@@ -87,7 +87,7 @@ class SpotifyApi {
 
     return {
       ...userProfile,
-      accountType: userProfile?.product as AccountType,
+      accountType: AccountType.Premium,
       name: userProfile?.display_name,
       avatar: userProfile?.images?.length > 0 ? userProfile?.images[0].url : '',
     };
