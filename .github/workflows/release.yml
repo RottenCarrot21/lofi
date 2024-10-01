@@ -30,8 +30,13 @@ jobs:
           release: ${{ startsWith(github.ref, 'refs/tags/v') }}
           args: "-c.snap.publish=github -p always"
 
-      # New step: list files in the current directory after build
-      - name: List build output files
-        run: ls -R # Recursively list all files and directories to find the build output
-      - name: Current dir
-        run: pwd
+      # # New step: list files in the current directory after build
+      # - name: List build output files
+      #   run: ls -R # Recursively list all files and directories to find the build output
+
+      # Upload artifacts
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: ./dist # Replace once you know the correct path
